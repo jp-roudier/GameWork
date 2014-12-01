@@ -1,5 +1,9 @@
 package unit;
 
-public class Group {
+import java.util.List;
+
+public class Group extends Unit{
+	
+	List<Unit> units;
 
 }

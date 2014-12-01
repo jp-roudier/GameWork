@@ -1,5 +1,9 @@
 package unit;
 
-public class Element {
+public class Element extends Unit{
+	
+	public Element(){
+		
+	}
 
 }
