@@ -2,7 +2,7 @@ package board;
 
 import java.awt.Point;
 
-public class Board implements Cell{
+public class Board extends Cell{
 	
 	private Square[][] squares;
 
@@ -12,11 +12,6 @@ public class Board implements Cell{
 	public Point getPosition() {
 		
 		return null;
-	}
-	@Override
-	public void setPosition(Point point) {
-		
-		
 	}
 
 }
