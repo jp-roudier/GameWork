@@ -13,7 +13,7 @@ public class Test {
 		Element element = new Element();
 		element.setMove(new MoveTo());
 		
-		board.getCellAt(2, 2).set_unit(element);
+		board.getCellAt(2, 2).addUnit(element);
 
 		for (int i = 0; i < board.getCells().length; i++) {
 			for (int j = 0; j < board.getCells()[i].length; j++) {

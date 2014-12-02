@@ -1,6 +1,7 @@
 package board;
 
 import java.awt.Point;
+import java.util.ArrayList;
 import java.util.List;
 
 import unit.Unit;
@@ -10,7 +11,7 @@ public abstract class Cell {
 	protected Point point;
 	
 	Cell() {
-		
+		units = new ArrayList<Unit>();
 	}
 	
 	public void setPoint(Point point) {
