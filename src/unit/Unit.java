@@ -1,5 +1,7 @@
 package unit;
 
+import game.Player;
+
 import java.awt.Point;
 import java.util.List;
 import java.util.Map;
@@ -14,6 +16,7 @@ public abstract class Unit {
 	private Map<String,Action> actions;
 	private List<Cell> validCells;
 	private Point position;
+	private Player player;
 	
 	public Move getMove() {
 		return move;
@@ -58,5 +61,13 @@ public abstract class Unit {
 
 	public void setPosition(Point position) {
 		this.position = position;
+	}
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
 	}
 }
