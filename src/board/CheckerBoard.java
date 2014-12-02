@@ -6,10 +6,9 @@ public class CheckerBoard extends Board {
 	
 	public CheckerBoard(int x, int y){
 		super(x,y);
-		initAvecDesZeroEtDesUns();
+		initBoard();
 	}
-	
-	public void initAvecDesZeroEtDesUns(){
+	private void initBoard(){
 		boolean bool = false;
 		for (int i = 0; i < getCells().length; i++) {
 			for (int j = 0; j < getCells()[i].length; j++) {
