@@ -8,7 +8,7 @@ public abstract class GameHelper {
 	public static Board getBoard(){
 		return board;
 		}
-	public void setBoard(Board board){
-		this.board = board;
+	public static void setBoard(Board b){
+		board = b;
 	}
 }

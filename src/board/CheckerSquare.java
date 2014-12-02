@@ -12,6 +12,7 @@ public class CheckerSquare extends Square {
 	}
 
 	public String toString() {
-		return (checked) ? "0" : "1";
+		if (getUnits().size() == 0)		return (checked) ? "0" : "1";
+		else return "X";
 	}
 }

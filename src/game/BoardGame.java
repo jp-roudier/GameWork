@@ -1,18 +1,42 @@
 package game;
 
-import src.game.Game;
+import java.awt.Point;
+
+import unit.Element;
+import behaviour.move.MoveTo;
+import board.Board;
+import board.CheckerBoard;
+import board.CheckerSquare;
+import game.Game;
 
 public class BoardGame extends Game {
 
 	@Override
 	protected void init() {
-		// TODO Auto-generated method stub
-		
+		setBoard(new CheckerBoard(8, 8));
+//		CheckerBoard board = ;
+		initBoard();
+		GameHelper.setBoard(getBoard());
 	}
 
 	@Override
 	protected void start() {
-		// TODO Auto-generated method stub
+		
+		Element element = new Element();
+		element.setMove(new MoveTo());
+		
+//		BoardGame game = new BoardGame();
+		
+		
+		getBoard().getCellAt(2, 2).addUnit(element);
+		
+		afficherBoard(getBoard());
+		
+		
+		element.getMove().move(element, new Point(3,5));
+		
+		System.out.println("*********************************************");
+		afficherBoard(getBoard());
 		
 	}
 
@@ -33,5 +57,25 @@ public class BoardGame extends Game {
 		// TODO Auto-generated method stub
 		
 	}
-
+	private void initBoard(){
+//		getBoard() = new 
+		boolean bool = false;
+		for (int i = 0; i < getBoard().getCells().length; i++) {
+			for (int j = 0; j < getBoard().getCells()[i].length; j++) {
+				CheckerSquare square = new CheckerSquare(bool);
+				square.setPoint(new Point(i,j));
+				getBoard().getCells()[i][j] = square;
+				bool = !bool;
+			}
+			if (getBoard().getCells()[0].length%2 == 0)bool=!bool; 
+		}
+	}
+	static void afficherBoard(Board board){
+		for (int i = 0; i < board.getCells().length; i++) {
+			for (int j = 0; j < board.getCells()[i].length; j++) {
+				System.out.print(board.getCells()[i][j]);
+			}
+			System.out.println();
+		}
+	}
 }
