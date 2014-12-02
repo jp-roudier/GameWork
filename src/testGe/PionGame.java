@@ -91,7 +91,7 @@ public class PionGame extends Game{
 	private Element getPlayerElement(Player player){
 		for (Cell[] cells : getBoard().getCells()) {
 			for (Cell cell : cells) {
-				if (cell.getUnits().get(0).getPlayer() != null &&    cell.getUnits().get(0).getPlayer().equals(player))
+				if (cell.getUnits().size() != 0 &&    cell.getUnits().get(0).getPlayer().equals(player))
 					return (Element) cell.getUnits().get(0);
 			}
 		}
@@ -100,7 +100,9 @@ public class PionGame extends Game{
 	private void verif(int x, int y) {
 		if (getBoard().getCellAt(x-1, y-1).getUnits().size()==1){
 			System.out.println(getBoard().getCellAt(x-1, y-1).getUnits().get(0).getPlayer().getName()+" , vous êtes mort, désolé...");
+			getPlayers().remove(getBoard().getCellAt(x-1, y-1).getUnits().get(0).getPlayer());
 			getBoard().getCellAt(x-1, y-1).getUnits().remove(0);
+		
 			}
 		
 	}
