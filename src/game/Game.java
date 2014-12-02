@@ -71,6 +71,8 @@ public abstract class Game {
 	protected Player getCurrentPlayer() {
 		return this.currentPlayer;
 	}
-	
+	public void setBoard(Board board){
+		this.board = board;
+	}
 
 }
