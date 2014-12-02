@@ -13,18 +13,19 @@ public class Test {
 	public static void main(String[] args) {
 
 		
-		
+		/*
 		CheckerBoard board = new CheckerBoard(8, 8);
 		Element element = new Element();
-		element.setMove(new MoveTo());
+		element.setMove(new MoveTo());*/
 		
 		BoardGame game = new BoardGame();
-		game.setBoard(board);
+//		game.setBoard(board);
+		game.launch();
 		
 		
-		board.getCellAt(2, 2).addUnit(element);
-		element.getMove().move(element, new Point(3,5));
-
+		
+	}
+	static void afficherBoard(Board board){
 		for (int i = 0; i < board.getCells().length; i++) {
 			for (int j = 0; j < board.getCells()[i].length; j++) {
 				System.out.print(board.getCells()[i][j]);

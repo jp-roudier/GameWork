@@ -84,7 +84,9 @@ public abstract class Game {
 	public void setBoard(Board board){
 		this.board = board;
 	}
-	
+	public Board getBoard(){
+		return board;
+	}
 	protected void nextPlayer() {
 		if (currentPlayer==null)
 			getCurrentPlayer();
