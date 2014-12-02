@@ -6,7 +6,7 @@ public class TestProutGame {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Game prout = new ProutGame();
+		Game prout = ProutGame.getInstance();
 		
 		prout.launch();
 	}

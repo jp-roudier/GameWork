@@ -81,12 +81,7 @@ public abstract class Game {
 		}
 		return this.currentPlayer;
 	}
-	public void setBoard(Board board){
-		this.board = board;
-	}
-	public Board getBoard(){
-		return board;
-	}
+	
 	protected void nextPlayer() {
 		if (currentPlayer==null)
 			getCurrentPlayer();
@@ -107,6 +102,14 @@ public abstract class Game {
 	protected Player getWinner() {
 		return this.winner;
 	}
+	protected void setBoard(Board b) {
+		this.board = b;
+	}
+	
+	protected Board getBoard() {
+		return this.board;
+	}
+	
 
 
 }
