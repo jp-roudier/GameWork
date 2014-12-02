@@ -14,7 +14,6 @@ public class BoardGame extends Game {
 	@Override
 	protected void init() {
 		setBoard(new CheckerBoard(8, 8));
-//		CheckerBoard board = ;
 		initBoard();
 		GameHelper.setBoard(getBoard());
 	}
@@ -24,15 +23,8 @@ public class BoardGame extends Game {
 		
 		Element element = new Element();
 		element.setMove(new MoveTo());
-		
-//		BoardGame game = new BoardGame();
-		
-		
 		getBoard().getCellAt(2, 2).addUnit(element);
-		
 		afficherBoard(getBoard());
-		
-		
 		element.getMove().move(element, new Point(3,5));
 		
 		System.out.println("*********************************************");
