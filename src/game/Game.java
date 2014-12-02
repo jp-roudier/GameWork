@@ -81,6 +81,9 @@ public abstract class Game {
 		}
 		return this.currentPlayer;
 	}
+	public void setBoard(Board board){
+		this.board = board;
+	}
 	
 	protected void nextPlayer() {
 		if (currentPlayer==null)
@@ -102,6 +105,6 @@ public abstract class Game {
 	protected Player getWinner() {
 		return this.winner;
 	}
-	
+
 
 }
