@@ -1,5 +1,7 @@
 package game;
 
+import src.game.Game;
+
 public class BoardGame extends Game {
 
 	@Override
