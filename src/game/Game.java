@@ -1,20 +1,26 @@
 package game;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import board.Board;
 import controller.Rule;
 
 public abstract class Game {
 	
 	// liste des joueurs
-	private List<Player> players;
+	private List<Player> players = new ArrayList<Player>();
 	
 	// joueur courant
 	private Player currentPlayer;
 	
+	// gagnant
+	private Player winner;
+	
 	// map des règles
-	private Map<String, Rule> rules;
+	private Map<String, Rule> rules = new HashMap<String, Rule>();
 	
 	// plateau de jeu
 	private Board board;
@@ -69,7 +75,32 @@ public abstract class Game {
 	}
 	
 	protected Player getCurrentPlayer() {
+		if (currentPlayer==null) {
+			if (players.size()>0)
+				setCurrentPlayer(players.get(0));
+		}
 		return this.currentPlayer;
+	}
+	
+	protected void nextPlayer() {
+		if (currentPlayer==null)
+			getCurrentPlayer();
+		else {
+			int pIndex = players.indexOf(currentPlayer);
+			if (pIndex<players.size()-1) {
+				setCurrentPlayer(players.get(pIndex+1));
+			} else {
+				setCurrentPlayer(players.get(0));
+			}
+		}
+	}
+	
+	protected void setWinner(Player p) {
+		this.winner = p;
+	}
+	
+	protected Player getWinner() {
+		return this.winner;
 	}
 	
 
