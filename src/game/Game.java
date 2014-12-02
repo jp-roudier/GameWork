@@ -104,5 +104,4 @@ public abstract class Game {
 	protected Player getWinner() {
 		return this.winner;
 	}
-
 }
