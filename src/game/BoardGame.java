@@ -3,31 +3,31 @@ package game;
 public class BoardGame extends Game {
 
 	@Override
-	void init() {
+	protected void init() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	void start() {
+	protected void start() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	boolean finished() {
+	protected boolean finished() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	void end() {
+	protected void end() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	void nextRound() {
+	protected void nextRound() {
 		// TODO Auto-generated method stub
 		
 	}
