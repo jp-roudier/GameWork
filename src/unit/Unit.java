@@ -42,6 +42,11 @@ public abstract class Unit {
 	public void move(){
 		move.move();
 	}
+	
+	public void moveTo(int x, int y){
+		move();
+		position.move(x, y);
+	}
 
 	public void action(String action){
 		actions.get(action).action();

@@ -10,5 +10,24 @@ public abstract class Game {
 	private List<Player> players;
 	private Map<String, Rule> rules;
 	private Board board;
+	
+	public final void launch() {
+		init();
+		start();
+		while (!finished()) {
+			nextRound();
+		}
+		end();
+	}
+	
+	abstract void init();
+	
+	abstract void start();
+	
+	abstract boolean finished();
+	
+	abstract void end();
+	
+	abstract void nextRound();
 
 }
