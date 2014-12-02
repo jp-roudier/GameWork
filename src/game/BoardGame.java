@@ -50,7 +50,6 @@ public class BoardGame extends Game {
 		
 	}
 	private void initBoard(){
-//		getBoard() = new 
 		boolean bool = false;
 		for (int i = 0; i < getBoard().getCells().length; i++) {
 			for (int j = 0; j < getBoard().getCells()[i].length; j++) {
