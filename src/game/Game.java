@@ -104,18 +104,5 @@ public abstract class Game {
 	protected Player getWinner() {
 		return this.winner;
 	}
-<<<<<<< Upstream, based on origin/master
-	protected void setBoard(Board b) {
-		this.board = b;
-	}
-	
-	protected Board getBoard() {
-		return this.board;
-	}
-	
-
 
 }
-=======
-}
->>>>>>> b39a513 Commit avant "propreté"
