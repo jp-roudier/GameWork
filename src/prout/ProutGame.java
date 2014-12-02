@@ -7,8 +7,14 @@ import game.Player;
 
 public class ProutGame extends Game {
 	
+	// instance du singleton
+	static ProutGame instance;
+	
 	// scanner input
 	Scanner sc;
+	
+	
+	private ProutGame() { super(); } ;
 	
 	@Override
 	protected void init() {
@@ -70,6 +76,12 @@ public class ProutGame extends Game {
 		System.out.println("Le jeu est terminé, le gagnant est "+getWinner().getName());
 		
 		sc.close();
+	}
+
+	public static ProutGame getInstance() {
+		if (instance == null)
+			instance = new ProutGame();
+		return instance;
 	}
 
 

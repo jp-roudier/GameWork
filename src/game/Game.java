@@ -103,5 +103,13 @@ public abstract class Game {
 		return this.winner;
 	}
 	
+	protected void setBoard(Board b) {
+		this.board = b;
+	}
+	
+	protected Board getBoard() {
+		return this.board;
+	}
+	
 
 }
