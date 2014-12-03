@@ -3,10 +3,11 @@ package board;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import unit.Unit;
 
-public abstract class Cell {
+public abstract class Cell extends Properties {
 	
 	protected Point point;
 	

@@ -20,9 +20,8 @@ public class ProutGame extends Game {
 	protected void init() {
 		// TODO Auto-generated method stub
 		System.out.println("Bienvenue dans notre Jeu de Prout !");
-		
-		Player p1 = new Player("Joueur 1");
-		addPlayer(p1);
+
+		addPlayer(new Player("Joueur 1"));
 		addPlayer(new Player("Joueur 2"));
 		
 		sc = new Scanner(System.in);

@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
+
 import board.Board;
 import controller.Rule;
 
-public abstract class Game {
+public abstract class Game extends Properties {
 	// liste des joueurs
 	private List<Player> players = new ArrayList<Player>();
 	// joueur courant
