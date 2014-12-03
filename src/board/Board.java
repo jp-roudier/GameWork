@@ -13,8 +13,8 @@ public abstract class Board extends Cell {
 		cells = new Square[nbLines][nbColumns];
 	}
 
-	public Cell getCellAt(int nbLines, int nbColumns) {
-		return cells[nbLines][nbColumns];
+	public Cell getCellAt(int Line, int Column) {
+		return cells[Line][Column];
 	}
 
 	public Cell[][] getCells() {
@@ -29,5 +29,5 @@ public abstract class Board extends Cell {
 	public Point getPosition() {
 		return null;
 	}
-
+	
 }
