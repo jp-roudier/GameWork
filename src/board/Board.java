@@ -9,12 +9,12 @@ public abstract class Board extends Cell {
 	public Board() {
 	}
 
-	protected Board(int x, int y) {
-		cells = new Square[y][x];
+	protected Board(int nbLines, int nbColumns) {
+		cells = new Square[nbLines][nbColumns];
 	}
 
-	public Cell getCellAt(int x, int y) {
-		return cells[x][y];
+	public Cell getCellAt(int nbLines, int nbColumns) {
+		return cells[nbLines][nbColumns];
 	}
 
 	public Cell[][] getCells() {
