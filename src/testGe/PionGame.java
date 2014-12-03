@@ -117,7 +117,7 @@ public class PionGame extends Game{
 		}
 		System.out.println("*********************************************");
 	}
-	public static PionGame getInstance(){
+	public static synchronized PionGame getInstance(){
 		return (instance != null)? instance : (instance=new PionGame());
 	}
 

@@ -5,12 +5,13 @@ import game.Player;
 import java.awt.Point;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import behaviour.action.Action;
 import behaviour.move.Move;
 import board.Cell;
 
-public abstract class Unit {
+public abstract class Unit extends Properties {
 	
 	private Move move;
 	private Map<String,Action> actions;
