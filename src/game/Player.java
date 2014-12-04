@@ -6,6 +6,7 @@ public class Player extends Properties {
 	
 	public Player(String name) {
 		this.setProperty("name", name);
+		this.setProperty("score", "0");
 	}
 	
 	/* @Deprecated Use getProperty("name") instead */

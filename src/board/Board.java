@@ -19,6 +19,7 @@ public abstract class Board extends Cell {
 		}
 		System.out.println("*********************************************");
 	}
+	
 	protected Board(int nbLines, int nbColumns) {
 		cells = new Square[nbLines][nbColumns];
 	}
