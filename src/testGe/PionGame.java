@@ -56,8 +56,7 @@ public class PionGame extends Game{
 			element.setMove(new MoveTo());
 			getBoard().getCellAt(x-1, y-1).addUnit(element);
 		}
-		afficherBoard(getBoard());
-		
+		getBoard().afficherBoard();
 	}
 
 	@Override
@@ -85,9 +84,11 @@ public class PionGame extends Game{
 		y=scan.nextInt();
 		verif(x,y);
 		getPlayerElement(p).getMove().move(getPlayerElement(p), new Point(x-1,y-1));
-		afficherBoard(getBoard());
+		getBoard().afficherBoard();
 		nextPlayer();
 	}
+	/* TODO  supprimer cette methode horrible qui parcours 15 fois la carte pour retrouver
+	 * le pion du joueur en cours*/
 	private Element getPlayerElement(Player player){
 		for (Cell[] cells : getBoard().getCells()) {
 			for (Cell cell : cells) {
@@ -97,25 +98,13 @@ public class PionGame extends Game{
 		}
 		return null;
 	}
+	/* TODO */
 	private void verif(int x, int y) {
 		if (getBoard().getCellAt(x-1, y-1).getUnits().size()==1){
 			System.out.println(getBoard().getCellAt(x-1, y-1).getUnits().get(0).getPlayer().getName()+" , vous êtes mort, désolé...");
 			getPlayers().remove(getBoard().getCellAt(x-1, y-1).getUnits().get(0).getPlayer());
 			getBoard().getCellAt(x-1, y-1).getUnits().remove(0);
-		
-			}
-		
-	}
-
-	static void afficherBoard(Board board){
-		System.out.println("*********************************************");
-		for (int i = 0; i < board.getCells().length; i++) {
-			for (int j = 0; j < board.getCells()[i].length; j++) {
-				System.out.print(board.getCells()[i][j]);
-			}
-			System.out.println();
 		}
-		System.out.println("*********************************************");
 	}
 	public static synchronized PionGame getInstance(){
 		return (instance != null)? instance : (instance=new PionGame());
