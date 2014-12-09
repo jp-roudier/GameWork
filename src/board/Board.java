@@ -5,6 +5,7 @@ import java.awt.Point;
 public abstract class Board extends Cell {
 
 	private Cell[][] cells;
+	private Cell[][][] tab3D;
 
 	public Board() {
 	}
@@ -22,6 +23,10 @@ public abstract class Board extends Cell {
 	
 	protected Board(int nbLines, int nbColumns) {
 		cells = new Square[nbLines][nbColumns];
+	}
+	
+	protected Board(int nbLines, int nbColumns, int nbHigh) {
+		tab3D = new Square[nbLines][nbColumns][nbHigh];
 	}
 
 	public Cell getCellAt(int Line, int Column) {
